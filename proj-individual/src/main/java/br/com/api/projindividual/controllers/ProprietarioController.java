@@ -13,9 +13,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.api.g3.entities.Cliente;
+import br.com.api.projindividual.entities.Proprietario;
 
 @RestController  //marcar uma classe em um aplicativo Spring como um controlador.
-@RequestMapping("/teste") //mapear métodos de um controlador 
+@RequestMapping("/proprietario") //mapear métodos de um controlador 
 public class ProprietarioController {
 	
 	@Autowired //fornece as instâncias de objetos necessárias,
@@ -27,8 +28,7 @@ public class ProprietarioController {
 		return proprietarioService.visualizarProprietario(id);
 	}
 	
-	@GetMapping("/visualizar-proprietarios")// Quando uma solicitação GET é feita p/ essa URL, o método
-												// visualizarCliente() será invocado.
+	@GetMapping("/visualizar-proprietarios")
 	public List<proprietario>visualizarProprietarios(){
 		
 		return proprietarioService.visualizarProprietarios();
@@ -38,7 +38,7 @@ public class ProprietarioController {
 	
 	public Proprietario registrarProprietario (@RequestBody Proprietario proprietario) {
 		
-		return proprietarioSercice.registrarProprietario(proprietario);
+		return proprietarioService.registrarProprietario(proprietario);
 	}
 	
 	@PutMapping("/atualizar-proprietario/{id}")
@@ -49,7 +49,7 @@ public class ProprietarioController {
 	@DeleteMapping ("/apagar-proprietario/{id}")
 	public void apagarProprietario(@PathVariable Integer id) {
 		
-		proprietarioSercice.apagarProprietario(id);
+		proprietarioService.apagarProprietario(id);
 	}
 	
 	
