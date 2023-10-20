@@ -30,7 +30,7 @@ public class Inquilino {
 		
 	}
 
-	public Inquilino(Integer id, String nome, String telefone, String endereço, String cpf) {
+	public Inquilino(Integer id, String nome, String telefone, String endereco, String cpf) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -63,11 +63,11 @@ public class Inquilino {
 		this.telefone = telefone;
 	}
 
-	public String getEndereço() {
+	public String getEndereco() {
 		return endereco;
 	}
 
-	public void setEndereço(String endereço) {
+	public void setEndereco(String endereço) {
 		this.endereco = endereço;
 	}
 

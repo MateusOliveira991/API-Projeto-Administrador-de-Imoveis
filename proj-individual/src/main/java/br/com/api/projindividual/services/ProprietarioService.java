@@ -16,7 +16,7 @@ public class ProprietarioService {
 		return proprietarioRepository.findById(id).get();
 	}
 	
-	public List<Proprietario> visualizarProprietario(){
+	public List<Proprietario> visualizarProprietarios(){
 		return proprietarioRepository.findAll();
 	}
 	

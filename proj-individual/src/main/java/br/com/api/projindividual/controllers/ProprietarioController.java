@@ -11,9 +11,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import br.com.api.g3.entities.Cliente;
 import br.com.api.projindividual.entities.Proprietario;
+import br.com.api.projindividual.services.ProprietarioService;
 
 @RestController  //marcar uma classe em um aplicativo Spring como um controlador.
 @RequestMapping("/proprietario") //mapear métodos de um controlador 
@@ -29,7 +28,7 @@ public class ProprietarioController {
 	}
 	
 	@GetMapping("/visualizar-proprietarios")
-	public List<proprietario>visualizarProprietarios(){
+	public List<Proprietario>visualizarProprietarios(){
 		
 		return proprietarioService.visualizarProprietarios();
 	}

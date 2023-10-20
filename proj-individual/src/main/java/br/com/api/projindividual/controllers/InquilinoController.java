@@ -29,7 +29,7 @@ public class InquilinoController {
 		}
 		
 		@GetMapping("/visualizar-inquilinos")
-		public List<inquilinos>visualizarInquilinos(){
+		public List<Inquilino>visualizarInquilinos(){
 			return inquilinoService.visualizarInquilinos();
 		}
 
