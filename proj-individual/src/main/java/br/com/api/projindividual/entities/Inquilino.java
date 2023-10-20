@@ -18,7 +18,7 @@ public class Inquilino {
 	private Integer id;
 	private String nome;
 	private String telefone;
-	private String endereço;
+	private String endereco;
 	private String cpf;
 	
 	@ManyToOne
@@ -35,7 +35,7 @@ public class Inquilino {
 		this.id = id;
 		this.nome = nome;
 		this.telefone = telefone;
-		this.endereço = endereço;
+		this.endereco = endereco;
 		this.cpf = cpf;
 	}
 
@@ -64,11 +64,11 @@ public class Inquilino {
 	}
 
 	public String getEndereço() {
-		return endereço;
+		return endereco;
 	}
 
 	public void setEndereço(String endereço) {
-		this.endereço = endereço;
+		this.endereco = endereço;
 	}
 
 	public String getCpf() {
