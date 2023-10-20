@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.api.projindividual.entities.Inquilino;
+import br.com.api.projindividual.services.InquilinoService;
 
 @RestController
 @RequestMapping ("/inquilino")
@@ -28,7 +29,7 @@ public class InquilinoController {
 		}
 		
 		@GetMapping("/visualizar-inquilinos")
-		public List<inquilino>visualizarInquilinos(){
+		public List<inquilinos>visualizarInquilinos(){
 			return inquilinoService.visualizarInquilinos();
 		}
 
