@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>br.com.api</groupId>
 	<artifactId>proj-individual</artifactId>
-	<version>3.3.0</version>
+	<version>4.0.0</version>
 	<name>proj-individual</name>
 	<description>Projeto Individual API</description>
 	<properties>
