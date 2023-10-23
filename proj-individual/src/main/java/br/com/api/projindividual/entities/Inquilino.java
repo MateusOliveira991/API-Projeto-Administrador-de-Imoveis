@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity  //mostrar que vai vir uma tabela no banco de dados
@@ -18,25 +19,29 @@ public class Inquilino {
 	private Integer id;
 	private String nome;
 	private String telefone;
-	private String endereco;
 	private String cpf;
 	
 	@ManyToOne
 	@JoinColumn(name="proprietario_id")
 	private Proprietario proprietario;
+	
+	@OneToOne
+	@JoinColumn(name="endereco_id")
+	private Endereco endereco;
 
 	public Inquilino() {
 		super(); //Pq aqui tem super e no outro não se ambos não tem uma super classe?
 		
 	}
 
-	public Inquilino(Integer id, String nome, String telefone, String endereco, String cpf) {
+	public Inquilino(Integer id, String nome, Proprietario proprietario, String telefone, Endereco endereco, String cpf) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.telefone = telefone;
 		this.endereco = endereco;
 		this.cpf = cpf;
+		this.proprietario= proprietario;
 	}
 
 	public Integer getId() {
@@ -63,11 +68,11 @@ public class Inquilino {
 		this.telefone = telefone;
 	}
 
-	public String getEndereco() {
+	public Endereco getEndereco() {
 		return endereco;
 	}
 
-	public void setEndereco(String endereço) {
+	public void setEndereco(Endereco endereço) {
 		this.endereco = endereço;
 	}
 

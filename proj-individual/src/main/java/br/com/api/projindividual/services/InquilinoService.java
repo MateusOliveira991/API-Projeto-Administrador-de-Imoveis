@@ -3,11 +3,13 @@ package br.com.api.projindividual.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import br.com.api.projindividual.entities.Inquilino;
 import br.com.api.projindividual.entities.Proprietario;
 import br.com.api.projindividual.repositories.InquilinoRepository;
 
+@Service
 public class InquilinoService {
 	
 	@Autowired

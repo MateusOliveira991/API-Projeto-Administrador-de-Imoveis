@@ -21,7 +21,7 @@ public class Proprietario {
 	private String telefone;
 	private String cpf;
 	
-	@OneToMany(mappedBy="Proprietario")
+	@OneToMany(mappedBy="proprietario")
 	private List<Inquilino> inquilinos;
 
 	public Proprietario() {
