@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.api.projindividual.dto.EnderecoDTO;
 import br.com.api.projindividual.entities.Endereco;
 import br.com.api.projindividual.services.EnderecoService;
 import io.swagger.annotations.ApiOperation;
@@ -40,7 +41,7 @@ public class EnderecoController {
 	@ApiOperation("Registra um endereço a partir de cep e complemento")
 	@PostMapping ("/registrar-endereco")
 	
-	public Endereco registrarEndereco (@RequestBody Endereco endereco) {
+	public Endereco registrarEndereco (@RequestBody EnderecoDTO endereco) {
 		
 		return enderecoService.registrarEndereco(endereco);
 	}

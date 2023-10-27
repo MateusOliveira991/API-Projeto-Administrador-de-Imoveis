@@ -26,7 +26,7 @@ public class EnderecoService {
 		return enderecoRepository.findAll();
 	}
 
-	public Endereco registrarEndereco(Endereco endereco) {
+	public Endereco registrarEndereco(EnderecoDTO endereco) {
 		Endereco viaCep=pesquisarEndereco(endereco.getCep());
 		Endereco enderecoNovo=new Endereco();
 		enderecoNovo.setBairro(viaCep.getBairro());
