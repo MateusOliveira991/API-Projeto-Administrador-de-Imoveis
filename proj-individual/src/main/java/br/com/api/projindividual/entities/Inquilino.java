@@ -68,14 +68,6 @@ public class Inquilino {
 		this.telefone = telefone;
 	}
 
-	public Endereco getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(Endereco endereço) {
-		this.endereco = endereço;
-	}
-
 	public String getCpf() {
 		return cpf;
 	}
@@ -83,6 +75,24 @@ public class Inquilino {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
+
+	public Proprietario getProprietario() {
+		return proprietario;
+	}
+
+	public void setProprietario(Proprietario proprietario) {
+		this.proprietario = proprietario;
+	}
+
+	public Endereco getEndereco() {
+		return endereco;
+	}
+
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
+	}
+
+	
 	
 	
 
