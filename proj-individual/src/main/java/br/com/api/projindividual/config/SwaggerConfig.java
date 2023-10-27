@@ -25,7 +25,7 @@ public class SwaggerConfig {
 	private ApiInfo apiInfo() {
 		ApiInfo apiInfo = new ApiInfoBuilder().title("Documentação da Api")
 				.description("Projeto Individual")
-				.license("Apache license version 2.0").version("5.4.0").build();
+				.license("Apache license version 2.0").version("5.5.0").build();
 					return apiInfo;
 
 	}
