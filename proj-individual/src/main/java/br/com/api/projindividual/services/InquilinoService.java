@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.api.projindividual.entities.Inquilino;
-import br.com.api.projindividual.entities.Proprietario;
 import br.com.api.projindividual.repositories.InquilinoRepository;
 
 @Service
@@ -14,6 +13,12 @@ public class InquilinoService {
 	
 	@Autowired
 	InquilinoRepository inquilinoRepository;
+	
+	private EmailService emailService;
+    @Autowired
+    public void setEmailService(EmailService emailService) {
+        this.emailService = emailService;
+    }
 	
 	public Inquilino visualizarInquilino(Integer id) {
 		return inquilinoRepository.findById(id).get();
@@ -23,6 +28,8 @@ public class InquilinoService {
 		return inquilinoRepository.findAll();
 	}
 	public Inquilino registrarInquilino(Inquilino inquilino) {
+		
+		emailService.envioEmailCadastro(inquilino);
 		return inquilinoRepository.save(inquilino);
 	}
 	
