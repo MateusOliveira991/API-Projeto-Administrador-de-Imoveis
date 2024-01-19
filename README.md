@@ -1,7 +1,7 @@
 # API-Individual-MateusOliveira
 
 ## Descrição do Projeto
-<p>Trata-se de um sistema criado para um corretor independente que trabalha para um casal de proprietários de imóveis </p>
+<p>Trata-se de uma API criada para um corretor independente que trabalha para um casal de proprietários de imóveis </p>
 
 
 ## Funcionalidades do projeto
